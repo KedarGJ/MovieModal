@@ -1,0 +1,137 @@
+body{
+	background-color: #042b5f;
+}
+
+.logo{
+	width: 120px;
+	display: inline-block;
+}
+
+.logo img{
+	width: 100%;
+	object-fit:cover; 
+}
+
+#postsContainer .card{
+	height: 100%;
+}
+
+#postsContainer .title{
+	height: 33px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.moviecard{
+	height: 550px;
+	position: relative;
+	overflow: hidden;
+	
+}
+
+.moviecard img{
+	height: 100%;
+	width: 100%;
+	object-fit:cover;
+}
+
+.ratingsection {
+	position: absolute;
+	background-color: white;
+	padding: 1rem;
+	bottom:0;
+	left: 0;
+	right:0;
+}
+
+.overviewsection{
+	position: absolute;
+	top: 30%;
+	background-color: white;
+	padding: 20px;
+	height: 70%;
+	transition: all .5s ease-in-out;
+	opacity: 0;
+	left : 0;
+	width : 100%;
+}
+
+.moviecard:hover .overviewsection,
+.moviecard:focus .overviewsection,
+.moviecard:active .overviewsection{
+	top: 30%;
+	opacity:1;
+}
+
+.color{
+	background-color: green;
+}
+
+h2.mb-0 {
+	height:30px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.backDrop {
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(0,0,0,0.7);
+	top: 0;
+	left: 0;
+	display: none;
+	animation: fadeIn 0.2s ease-in-out;
+}
+.backDrop.active,.movieModal.active{
+	display: block;
+	
+}
+
+.movieModal {
+
+	position: fixed;
+	width: 60%;
+	left: 20%;
+	top: 8%;
+	display: none;
+	animation: fadeSlideDown 0.3s ease-in-out; 
+}
+
+.closeModal{
+	cursor: pointer;
+}
+
+.action{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+@keyframes fadeSlideDown{
+	from {
+		transform: translateY(-50px);
+		opacity: 0;
+		}
+		
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn{
+	from {
+		opacity: 0;
+		}
+		
+	to {
+		opacity: 1;
+	}
+}
